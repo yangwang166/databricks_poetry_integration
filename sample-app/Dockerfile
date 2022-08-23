@@ -8,7 +8,6 @@ RUN pip install "poetry==$POETRY_VERSION"
 
 WORKDIR /deps
 
-COPY deps/poetry.lock /deps/
 COPY deps/pyproject.toml /deps/
 
 RUN poetry config virtualenvs.create false
