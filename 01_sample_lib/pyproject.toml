@@ -1,8 +1,8 @@
 [tool.poetry]
 name = "samplelibyw"
-version = "0.1.0"
+version = "0.1.1"
 description = ""
-authors = ["Yang Wang <yangwang166@gmail.com>"]
+authors = ["Yang Wang <yangwang166@gmail.com>"] # Change it to your email
 
 [tool.poetry.dependencies]
 python = "^3.8"
@@ -15,5 +15,5 @@ build-backend = "poetry.core.masonry.api"
 
 [[tool.poetry.source]]
 name = "artifact"
-url = "https://yanganzssa-087659795860.d.codeartifact.ap-southeast-2.amazonaws.com/pypi/yanganzssa/"
+url = "https://yanganzssa-087659795860.d.codeartifact.ap-southeast-2.amazonaws.com/pypi/yanganzssa/" # Change it to your AWS CodeArtifact URL
 secondary = true

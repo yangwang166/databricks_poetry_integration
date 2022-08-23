@@ -1,0 +1,36 @@
+{
+    "num_workers": 0,
+    "cluster_name": "Poetry Cluster",
+    "spark_version": "10.4.x-scala2.12",
+    "spark_conf": {
+        "spark.databricks.cluster.profile": "singleNode",
+        "spark.master": "local[*, 4]"
+    },
+    "aws_attributes": {
+        "first_on_demand": 1,
+        "availability": "SPOT_WITH_FALLBACK",
+        "zone_id": "us-west-2c",
+        "spot_bid_price_percent": 100,
+        "ebs_volume_count": 0
+    },
+    "node_type_id": "i3.xlarge",
+    "driver_node_type_id": "i3.xlarge",
+    "ssh_public_keys": [],
+    "custom_tags": {
+        "ResourceClass": "SingleNode"
+    },
+    "spark_env_vars": {},
+    "autotermination_minutes": 120,
+    "enable_elastic_disk": true,
+    "init_scripts": [],
+    "docker_image": {
+        "url": "997819012307.dkr.ecr.ap-southeast-2.amazonaws.com/yanganzssa:latest",
+        "basic_auth": {
+            "username": "AWS",
+            "password": "fill in the password"
+        }
+    },
+    "single_user_name": "yang.wang@databricks.com",
+    "data_security_mode": "SINGLE_USER",
+    "runtime_engine": "STANDARD"
+}
