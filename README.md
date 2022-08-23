@@ -11,6 +11,6 @@ This databricks and poetry integration will make databricks more flexible for py
 
 ## Usage
 
-1) Build and Publish Python Library to CodeArtifact: sh 01_sample_lib/publish.sh
-2) Build and Publish a custom databricks runtime docker image to ECR which include a poetry managed library: sh build_and_publish.sh
-3) Create a databricks cluster with the custom docker image using CLI 
+1) Build and Publish Python Library to CodeArtifact: `sh 01_sample_lib/publish.sh`
+2) Build and Publish a custom databricks runtime docker image to ECR which include a poetry managed library: `sh 02_sample_image/build_and_publish.sh`
+3) Create a databricks cluster with the custom docker image using CLI: `sh 03_launch_poetry_cluster/create_poetry_cluster.sh` 
