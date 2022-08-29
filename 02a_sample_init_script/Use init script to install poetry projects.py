@@ -27,10 +27,14 @@ poetry install --no-interaction --no-ansi
 
 # COMMAND ----------
 
-# DBTITLE 1,3 Use the init script to start your cluster and test the libs installed by the init script
-import samplelibyw
-print(samplelibyw.PI)
+# DBTITLE 1,3 Use the init script and configure following env vars
+# MAGIC %md
+# MAGIC ```
+# MAGIC POETRY_HTTP_BASIC_ARTIFACT_PASSWORD={{secrets/poetry_integration/password}}
+# MAGIC POETRY_HTTP_BASIC_ARTIFACT_USERNAME={{secrets/poetry_integration/username}}
+# MAGIC ```
 
 # COMMAND ----------
 
-
+import samplelibyw
+print(samplelibyw.PI)
