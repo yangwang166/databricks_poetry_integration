@@ -11,6 +11,6 @@ WORKDIR /deps
 
 COPY deps/pyproject.toml /deps/
 
-RUN poetry config virtualenvs.create false
+RUN poetry config virtualenvs.create false # When option is false, then poetry will install dependencies to current python interpreter
 RUN poetry install --no-interaction --no-ansi
 

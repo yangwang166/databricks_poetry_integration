@@ -1,0 +1,45 @@
+{
+    "num_workers": 0,
+    "cluster_name": "Poetry Cluster with InitScript",
+    "spark_version": "10.4.x-scala2.12",
+    "spark_conf": {
+        "spark.master": "local[*, 4]",
+        "spark.databricks.cluster.profile": "singleNode"
+    },
+    "aws_attributes": {
+        "first_on_demand": 1,
+        "availability": "SPOT_WITH_FALLBACK",
+        "zone_id": "us-west-2c",
+        "spot_bid_price_percent": 100,
+        "ebs_volume_count": 0
+    },
+    "node_type_id": "i3.xlarge",
+    "driver_node_type_id": "i3.xlarge",
+    "ssh_public_keys": [],
+    "custom_tags": {
+        "ResourceClass": "SingleNode"
+    },
+    "cluster_log_conf": {
+        "dbfs": {
+            "destination": "dbfs:/cluster-logs/yangwang"
+        }
+    },
+    "spark_env_vars": {
+        "POETRY_HTTP_BASIC_ARTIFACT_PASSWORD": "{{secrets/poetry_integration/password}}",
+        "POETRY_HTTP_BASIC_ARTIFACT_USERNAME": "{{secrets/poetry_integration/username}}",
+        "PYSPARK_PYTHON": "/databricks/python3/bin/python3"
+    },
+    "autotermination_minutes": 120,
+    "enable_elastic_disk": true,
+    "cluster_source": "UI",
+    "init_scripts": [
+        {
+            "dbfs": {
+                "destination": "dbfs:/databricks/scripts/poetry_init.sh"
+            }
+        }
+    ],
+    "single_user_name": "yang.wang@databricks.com",
+    "data_security_mode": "SINGLE_USER",
+    "runtime_engine": "STANDARD"
+}
