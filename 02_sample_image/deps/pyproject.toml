@@ -6,7 +6,7 @@ authors = ["Yang Wang <yangwang166@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-samplelibyw = {version = "^0.1.0", source = "artifact"}
+samplelibyw = {version = "0.1.5", source = "artifact"}
 
 [tool.poetry.dev-dependencies]
 
