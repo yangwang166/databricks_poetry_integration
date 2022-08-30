@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "samplelibyw"
-version = "0.1.6"
+version = "0.1.7"
 description = ""
 authors = ["Yang Wang <yangwang166@gmail.com>"] # Change it to your email
 
