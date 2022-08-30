@@ -12,9 +12,17 @@ This databricks and poetry integration will make databricks more flexible for py
 
 ## Usage
 
+### Using the Databricks Container Service (DCS) approach
+
 1) Build and Publish Poetry managed Python Library to CodeArtifact: `sh 01_sample_lib/build_and_publish.sh`
 2) Build and Publish a custom databricks runtime docker image to ECR which include a poetry managed library: `sh 02_sample_image/build_and_publish.sh`
 3) Create a databricks cluster with the custom docker image using CLI: `sh 03_launch_poetry_cluster/create_poetry_cluster.sh` 
+
+### Using the Init Script approach
+
+1) Build and Publish Poetry managed Python Library to CodeArtifact: `sh 01_sample_lib/build_and_publish.sh`
+2) Upload an init script to DBFS: `sh 02a_sample_init_script/upload_init_script.sh`
+3) Create a databricks cluster with init script: `sh 03a_launch_cluster_with_init_script/create_poetry_cluster.sh` 
 
 ## What is Poetry
 
