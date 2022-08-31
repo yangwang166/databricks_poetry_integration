@@ -19,7 +19,8 @@ This databricks and poetry integration will make databricks more flexible for py
 2) Build and Publish a custom databricks runtime docker image to ECR which include a poetry managed library: `sh 02_sample_image/build_and_publish.sh`
 3) Create a databricks cluster with the custom docker image using CLI: `sh 03_launch_poetry_cluster/create_poetry_cluster.sh`
 
-Note: In DCS approach, you can fine grain control what python lib you want to bake in the image. In that case, you can start from https://github.com/databricks/containers/tree/master/ubuntu/python (databricksruntime/python) And change the pip install part to Poetry based libs install.
+**Note: In DCS approach, you can fine grain control what python lib you want to bake in the image. In that case, you can start from https://github.com/databricks/containers/tree/master/ubuntu/python (databricksruntime/python) And change the pip install part to Poetry based libs install.**
+
 
 ### Using the Init Script approach
 
@@ -27,7 +28,7 @@ Note: In DCS approach, you can fine grain control what python lib you want to ba
 2) Upload an init script to DBFS: `sh 02a_sample_init_script/upload_init_script.sh`
 3) Create a databricks cluster with init script: `sh 03a_launch_cluster_with_init_script/create_poetry_cluster.sh` 
 
-Note: The Init Script approach is more lightweight. If you only want to use Poetry to manage your app's lib dependency and don't worry about the pre-installed libs in DBR, then this is a suggest approach.
+**Note: The Init Script approach is more lightweight. If you only want to use Poetry to manage your app's lib dependency and don't worry about the pre-installed libs in DBR, then this is a suggest approach.**
 
 ## What is Poetry
 
